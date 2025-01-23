@@ -1,4 +1,5 @@
 using BlazorJSIntegration.Web.Components;
+using BlazorJSIntegration.Web.Services;
 
 namespace BlazorJSIntegration.Web
 {
@@ -11,6 +12,8 @@ namespace BlazorJSIntegration.Web
             // Add services to the container.
             builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents();
+
+            builder.Services.AddScoped<IntegrationService>();
 
             var app = builder.Build();
 
