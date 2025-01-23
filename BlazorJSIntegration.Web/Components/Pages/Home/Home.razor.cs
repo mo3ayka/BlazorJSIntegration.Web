@@ -1,4 +1,4 @@
-﻿using BlazorJSIntegration.Web.Services;
+﻿using BlazorJSIntegration.Common.Services;
 using Microsoft.AspNetCore.Components;
 
 namespace BlazorJSIntegration.Web.Components.Pages.Home;

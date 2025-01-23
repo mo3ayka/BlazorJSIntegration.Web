@@ -4,6 +4,8 @@ VisualStudioVersion = 17.13.35605.110
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorJSIntegration.Web", "BlazorJSIntegration.Web\BlazorJSIntegration.Web.csproj", "{64315E8A-31ED-44A2-B2A9-DED97B3BA5C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorJSIntegration.Common", "BlazorJSIntegration.Common\BlazorJSIntegration.Common.csproj", "{ED058927-2FA7-493E-9F7E-FE4AE925CB4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,6 +16,10 @@ Global
 		{64315E8A-31ED-44A2-B2A9-DED97B3BA5C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64315E8A-31ED-44A2-B2A9-DED97B3BA5C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64315E8A-31ED-44A2-B2A9-DED97B3BA5C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED058927-2FA7-493E-9F7E-FE4AE925CB4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED058927-2FA7-493E-9F7E-FE4AE925CB4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED058927-2FA7-493E-9F7E-FE4AE925CB4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED058927-2FA7-493E-9F7E-FE4AE925CB4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

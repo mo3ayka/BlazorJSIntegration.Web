@@ -1,6 +1,7 @@
-﻿using Microsoft.JSInterop;
+﻿using Microsoft.Extensions.Logging;
+using Microsoft.JSInterop;
 
-namespace BlazorJSIntegration.Web.Services;
+namespace BlazorJSIntegration.Common.Services;
 
 /// <summary>
 /// Integration service.

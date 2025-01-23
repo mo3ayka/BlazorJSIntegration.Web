@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+        <SupportedPlatform Include="browser" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.11" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="Scripts\index.ts">
+            <SubType>Code</SubType>
+        </None>
+        <None Update="Scripts\ts\integrationService.ts">
+            <SubType>Code</SubType>
+        </None>
+    </ItemGroup>
+
+    <Target Name="WebpackBuild" BeforeTargets="Build">
+        <!-- Ensure Node.js is installed -->
+        <Exec Command="node --version" ContinueOnError="true">
+            <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+        </Exec>
+        <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+        <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+        <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+        <Exec Command="npm i" />
+        <Exec Condition=" '$(Configuration)' == '' Or '$(Configuration)' == 'Debug' " Command="npm run build:dev" />
+    </Target>
+
+</Project>

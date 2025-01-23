@@ -1,5 +1,5 @@
+using BlazorJSIntegration.Common.Services;
 using BlazorJSIntegration.Web.Components;
-using BlazorJSIntegration.Web.Services;
 
 namespace BlazorJSIntegration.Web
 {
